@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders root App wrapper', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const root = document.querySelector('.App');
+  expect(root).toBeInTheDocument();
+});
+
+test('renders navbar component', () => {
+  render(<App />);
+  const root = document.querySelector('.App');
+  expect(root).toBeInTheDocument();
+  expect(root.innerHTML).toContain('NIT Patna');
 });
