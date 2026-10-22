@@ -3,13 +3,12 @@ import App from './App';
 
 test('renders root App wrapper', () => {
   render(<App />);
-  const root = document.querySelector('.App');
-  expect(root).toBeInTheDocument();
+  expect(screen.getByText(/Experience the Fusion/i)).toBeInTheDocument();
 });
 
 test('renders navbar component', () => {
   render(<App />);
-  const root = document.querySelector('.App');
-  expect(root).toBeInTheDocument();
-  expect(root.innerHTML).toContain('NIT Patna');
+  expect(screen.getByText(/About Us/i)).toBeInTheDocument();
+  expect(screen.getByText(/Events/i)).toBeInTheDocument();
+  expect(screen.getByText(/Sponsors/i)).toBeInTheDocument();
 });
