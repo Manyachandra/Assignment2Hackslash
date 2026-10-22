@@ -46,5 +46,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "A React web application built with Create React App, Bootstrap 5, react-bootstrap, MDB React UI Kit, and React Router."
 }
